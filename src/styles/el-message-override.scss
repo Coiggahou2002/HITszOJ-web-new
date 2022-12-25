@@ -1,0 +1,122 @@
+.el-message {
+  --el-message-padding: 15px 19px;
+  --el-message-close-size: 16px;
+  --el-message-close-icon-color: var(--el-text-color-placeholder);
+  --el-message-close-hover-color: var(--el-text-color-secondary);
+}
+
+.el-message {
+  max-width: calc(100% - 32px);
+  @apply rounded-xl shadow-2xl;
+  border-width: 2px;
+  position: fixed;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  top: 20px;
+  background-color: var(--el-message-bg-color);
+  transition: opacity var(--el-transition-duration), transform 0.4s, top 0.4s;
+  padding: var(--el-message-padding);
+  display: flex;
+  align-items: center;
+}
+
+.el-message.is-center {
+  justify-content: center;
+}
+
+.el-message.is-closable .el-message__content {
+  padding-right: 31px;
+}
+
+.el-message p {
+  margin: 0;
+}
+
+// success
+.el-message--success {
+  @apply border-green-400 bg-green-50
+  shadow-green-300;
+  .el-message__content {
+    @apply text-green-500;
+  }
+}
+.el-message .el-message-icon--success {
+  @apply text-green-500;
+}
+
+
+// warning
+.el-message--warning {
+  @apply border-yellow-400 bg-yellow-50
+  shadow-yellow-200;
+  .el-message__content {
+    @apply text-yello-500;
+  }
+}
+.el-message .el-message-icon--warning {
+  @apply text-yellow-500;
+}
+
+// error 
+.el-message--error {
+  @apply border-red-400 bg-red-50
+  shadow-red-300;
+  .el-message__content {
+    @apply text-red-500;
+  }
+}
+.el-message .el-message-icon--error {
+  @apply text-red-500;
+}
+
+// info
+.el-message--info {
+  @apply border-gray-400 bg-gray-50
+  shadow-gray-300;
+  .el-message__content {
+    @apply text-gray-500;
+  }
+}
+.el-message .el-message-icon--info {
+  @apply text-gray-500;
+}
+
+
+.el-message__icon {
+  margin-right: 10px;
+}
+
+.el-message .el-message__badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+.el-message__content {
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.el-message .el-message__closeBtn {
+  position: absolute;
+  top: 50%;
+  right: 19px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--el-message-close-icon-color);
+  font-size: var(--el-message-close-size);
+}
+
+
+.el-message .el-message__closeBtn:hover {
+  color: var(--el-message-close-hover-color);
+}
+
+.el-message-fade-enter-from,
+.el-message-fade-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}

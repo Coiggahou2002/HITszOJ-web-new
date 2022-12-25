@@ -2,3 +2,25 @@
 html {
   overflow: hidden;
 }
+
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+  border-radius: 100vw;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 100vw;
+  margin-block: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0,0,0,0.05);
+  border-radius: 100vw;
+
+  &:hover {
+    background-color: rgb(0,0,0,0.1);
+  }
+}
