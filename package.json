@@ -4,20 +4,42 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "cross-env NODE_ENV=development vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@bytemd/plugin-gemoji": "^1.18.0",
+    "@bytemd/plugin-gfm": "^1.18.0",
+    "@bytemd/plugin-highlight": "^1.18.0",
+    "@bytemd/plugin-math": "^1.18.0",
+    "@bytemd/vue-next": "^1.18.0",
+    "axios": "^1.2.1",
+    "bootstrap-icons": "^1.10.2",
+    "bytemd": "^1.18.0",
+    "crypto-js": "^4.1.1",
     "element-plus": "^2.2.27",
+    "file-saver": "^2.0.5",
+    "github-markdown-css": "^5.1.0",
+    "highlight.js": "^11.7.0",
+    "jsencrypt": "^3.3.1",
+    "jszip": "^3.10.1",
+    "katex": "^0.16.4",
+    "lodash": "^4.17.21",
+    "nprogress": "^0.2.0",
+    "papaparse": "^5.3.2",
+    "qiniu-js": "^3.4.1",
     "vue": "^3.2.45",
     "vue-router": "^4.0.13",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "mockjs": "^1.1.0",
     "sass": "^1.57.1",
     "vite": "^4.0.0",
+    "vite-plugin-mock": "^2.9.6",
     "vite-plugin-windicss": "^1.8.10",
     "windicss": "^3.5.6"
   }

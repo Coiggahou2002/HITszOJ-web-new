@@ -5,7 +5,9 @@ export default {
 </script>
 
 <template>
+    <router-view/>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 </style>
+
